@@ -67,8 +67,7 @@ struct btn_timer {
   clock_time_t duration;
 };
 
-static struct btn_timer sel_timer, left_timer, right_timer, up_timer,
-              down_timer;
+static struct btn_timer sel_timer;
 /*---------------------------------------------------------------------------*/
 /**
  * \brief Handler for SmartRF button presses

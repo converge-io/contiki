@@ -37,7 +37,7 @@
 /* Change to match your configuration */
 #define IEEE802154_CONF_PANID            0xABCD
 #define RF_CORE_CONF_CHANNEL                 25
-#define RF_BLE_CONF_ENABLED                   1
+#define RF_BLE_CONF_ENABLED                   0
 /*---------------------------------------------------------------------------*/
 #endif /* PROJECT_CONF_H_ */
 /*---------------------------------------------------------------------------*/

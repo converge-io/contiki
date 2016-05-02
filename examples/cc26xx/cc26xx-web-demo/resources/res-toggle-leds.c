@@ -91,7 +91,7 @@ static void
 res_post_handler_orange(void *request, void *response, uint8_t *buffer,
                         uint16_t preferred_size, int32_t *offset)
 {
-  leds_toggle(LEDS_ORANGE);
+  leds_toggle(LEDS_RED);
 }
 /*---------------------------------------------------------------------------*/
 /* Toggles the yellow led */

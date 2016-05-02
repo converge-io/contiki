@@ -61,6 +61,7 @@
 #define NETSTACK_CONF_MAC     csma_driver
 #endif
 
+
 #ifndef NETSTACK_CONF_RDC
 #define NETSTACK_CONF_RDC     contikimac_driver
 #endif
@@ -69,8 +70,8 @@
 #define NULLRDC_CONF_802154_AUTOACK             1
 
 /* Configure ContikiMAC for when it's selected */
-#define CONTIKIMAC_CONF_WITH_CONTIKIMAC_HEADER  0
-#define CONTIKIMAC_CONF_WITH_PHASE_OPTIMIZATION 0
+#define CONTIKIMAC_CONF_WITH_CONTIKIMAC_HEADER  1
+#define CONTIKIMAC_CONF_WITH_PHASE_OPTIMIZATION 1
 #define WITH_FAST_SLEEP                         1
 
 #ifndef NETSTACK_CONF_RDC_CHANNEL_CHECK_RATE

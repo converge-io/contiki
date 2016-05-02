@@ -359,7 +359,7 @@ PROCESS_THREAD(very_sleepy_demo_process, ev, data)
 
     PROCESS_YIELD();
 
-    if(ev == sensors_event && data == &button_left_sensor) {
+    if(ev == sensors_event && data == &button_select_sensor) {
       switch_to_normal();
     }
 
@@ -369,7 +369,7 @@ PROCESS_THREAD(very_sleepy_demo_process, ev, data)
     }
 
     if((ev == PROCESS_EVENT_TIMER && data == &et_periodic) ||
-       (ev == sensors_event && data == &button_left_sensor) ||
+       (ev == sensors_event && data == &button_select_sensor) ||
        (ev == event_new_config)) {
 
       /*

@@ -127,6 +127,54 @@
 #define BOARD_STRING "Converge Node v3.0.1 - Brock"
 /** @} */
 /*---------------------------------------------------------------------------*/
+/**
+ * \name Converge Node I/O Mapping
+ *
+ * Set all these to high-z until used
+ * @{
+ */
+#define BOARD_IOID_TEMP_D         IOID_5
+#define BOARD_IOID_SDA            IOID_6
+#define BOARD_IOID_SCL            IOID_7
+#define BOARD_IOID_MISO           IOID_9
+#define BOARD_IOID_MOSI           IOID_11
+#define BOARD_IOID_SCK            IOID_10
+#define BOARD_IOID_CS             IOID_12
+#define BOARD_IOID_SD_PWR         IOID_13
+#define BOARD_IOID_UC_IO1         IOID_14
+#define BOARD_IOID_JTAG_TDO       IOID_16
+#define BOARD_IOID_JTAG_TDI       IOID_17
+#define BOARD_IOID_SD_CD          IOID_18
+#define BOARD_IOID_UC_IO2         IOID_20
+#define BOARD_IOID_RPI_CD         IOID_21
+#define BOARD_IOID_V_BATT         IOID_23
+#define BOARD_IOID_VC_ADC         IOID_24
+#define BOARD_IOID_ACC_INT2       IOID_25
+#define BOARD_IOID_ACC_INT1       IOID_26
+#define BOARD_IOID_ACC_VDD        IOID_28
+
+#define BOARD_TEMP_D         (1 << BOARD_IOID_TEMP_D)
+#define BOARD_SDA            (1 << BOARD_IOID_SDA)
+#define BOARD_SCL            (1 << BOARD_IOID_SCL)
+#define BOARD_MISO           (1 << BOARD_IOID_MISO)
+#define BOARD_MOSI           (1 << BOARD_IOID_MOSI)
+#define BOARD_SCK            (1 << BOARD_IOID_SCK)
+#define BOARD_CS             (1 << BOARD_IOID_CS)
+#define BOARD_SD_PWR         (1 << BOARD_IOID_SD_PWR)
+#define BOARD_UC_IO1         (1 << BOARD_IOID_UC_IO1)
+#define BOARD_JTAG_TDO       (1 << BOARD_IOID_JTAG_TDO)
+#define BOARD_JTAG_TDI       (1 << BOARD_IOID_JTAG_TDI)
+#define BOARD_SD_CD          (1 << BOARD_IOID_SD_CD)
+#define BOARD_UC_IO2         (1 << BOARD_IOID_UC_IO2)
+#define BOARD_RPI_CD         (1 << BOARD_IOID_RPI_CD)
+#define BOARD_V_BATT         (1 << BOARD_IOID_V_BATT)
+#define BOARD_VC_ADC         (1 << BOARD_IOID_VC_ADC)
+#define BOARD_ACC_INT2       (1 << BOARD_IOID_ACC_INT2)
+#define BOARD_ACC_INT1       (1 << BOARD_IOID_ACC_INT1)
+#define BOARD_ACC_VDD        (1 << BOARD_IOID_ACC_VDD)
+/** @} */
+/*---------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------*/
 #endif /* BOARD_H_ */
 /*---------------------------------------------------------------------------*/
 /**

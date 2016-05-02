@@ -3,6 +3,7 @@
 *.map
 *.png
 *.log
+*.target
 *.elf
 *.zip
 *.d

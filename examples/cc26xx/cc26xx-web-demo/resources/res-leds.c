@@ -64,7 +64,7 @@ res_post_put_handler(void *request, void *response, uint8_t *buffer,
     } else if(strncmp(color, "y", len) == 0) {
       led = LEDS_YELLOW;
     } else if(strncmp(color, "o", len) == 0) {
-      led = LEDS_ORANGE;
+      led = LEDS_RED;
 #endif
     } else {
       success = 0;

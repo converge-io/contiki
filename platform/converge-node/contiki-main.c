@@ -65,6 +65,11 @@
 #include "driverlib/driverlib_release.h"
 
 #include <stdio.h>
+
+//Print the ll radio address
+#ifndef STARTUP_CONF_VERBOSE
+#define STARTUP_CONF_VERBOSE 1
+#endif
 /*---------------------------------------------------------------------------*/
 /** \brief Board specific iniatialisation */
 void board_init(void);
@@ -109,17 +114,20 @@ set_rf_params(void)
   NETSTACK_RADIO.set_object(RADIO_PARAM_64BIT_ADDR, ext_addr, 8);
 
   NETSTACK_RADIO.get_value(RADIO_PARAM_CHANNEL, &val);
-  printf(" RF: Channel %d\n", val);
+  printf("RF: Channel %d\n", val);
 
 #if STARTUP_CONF_VERBOSE
   {
     int i;
-    printf(" Link layer addr: ");
+    printf("RF: Link layer addr: ");
     for(i = 0; i < LINKADDR_SIZE - 1; i++) {
       printf("%02x:", linkaddr_node_addr.u8[i]);
     }
     printf("%02x\n", linkaddr_node_addr.u8[i]);
   }
+
+  printf("RF: 802.15.4 PANID: %x\n",IEEE802154_PANID);
+  printf("RF: LL Short Address: %x\n",short_addr);
 #endif
 }
 /*---------------------------------------------------------------------------*/

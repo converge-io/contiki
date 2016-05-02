@@ -49,7 +49,7 @@
 #endif
 
 #define MAX_PAYLOAD_LEN    40
-#define MSG_INTERVAL       (60 * CLOCK_SECOND)
+#define MSG_INTERVAL       (10 * CLOCK_SECOND)
 /*---------------------------------------------------------------------------*/
 static struct uip_udp_conn *client_conn = NULL;
 static struct etimer et;
@@ -107,9 +107,11 @@ timeout_handler(void)
   rpl_dag_t *dag;
 
   uip_ds6_addr_t *addr_desc = uip_ds6_get_global(ADDR_PREFERRED);
+
   if(addr_desc != NULL) {
     globaladdr = &addr_desc->ipaddr;
     dag = rpl_get_any_dag();
+
     if(dag) {
       uip_ipaddr_copy(&dest_addr, globaladdr);
       memcpy(&dest_addr.u8[8], &dag->dag_id.u8[8], sizeof(uip_ipaddr_t) / 2);

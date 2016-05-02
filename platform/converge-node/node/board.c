@@ -65,7 +65,26 @@ LPM_MODULE(srf_module, NULL, NULL, wakeup_handler, LPM_DOMAIN_NONE);
 static void
 configure_unused_pins(void)
 {
-  
+  ti_lib_ioc_pin_type_gpio_input(BOARD_IOID_TEMP_D);
+  ti_lib_ioc_pin_type_gpio_input(BOARD_IOID_SDA);
+  ti_lib_ioc_pin_type_gpio_input(BOARD_IOID_SCL);
+  ti_lib_ioc_pin_type_gpio_input(BOARD_IOID_MISO);
+  ti_lib_ioc_pin_type_gpio_input(BOARD_IOID_MOSI);
+  ti_lib_ioc_pin_type_gpio_input(BOARD_IOID_SCK);
+  ti_lib_ioc_pin_type_gpio_input(BOARD_IOID_CS);
+  ti_lib_ioc_pin_type_gpio_input(BOARD_IOID_SD_PWR);
+  ti_lib_ioc_pin_type_gpio_input(BOARD_IOID_UC_IO1);
+  ti_lib_ioc_pin_type_gpio_input(BOARD_IOID_JTAG_TDO);
+  ti_lib_ioc_pin_type_gpio_input(BOARD_IOID_JTAG_TDI);
+  ti_lib_ioc_pin_type_gpio_input(BOARD_IOID_SD_CD);
+  ti_lib_ioc_pin_type_gpio_input(BOARD_IOID_UC_IO2);
+  ti_lib_ioc_pin_type_gpio_input(BOARD_IOID_RPI_CD);
+  ti_lib_ioc_pin_type_gpio_input(BOARD_IOID_V_BATT);
+  ti_lib_ioc_pin_type_gpio_input(BOARD_IOID_VC_ADC);
+  ti_lib_ioc_pin_type_gpio_input(BOARD_IOID_ACC_INT2);
+  ti_lib_ioc_pin_type_gpio_input(BOARD_IOID_ACC_INT1);
+  ti_lib_ioc_pin_type_gpio_input(BOARD_IOID_ACC_VDD);
+
 }
 /*---------------------------------------------------------------------------*/
 void

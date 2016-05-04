@@ -31,7 +31,7 @@
 #define PROJECT_CONF_H_
 
 //#undef QUEUEBUF_CONF_NUM
-//#define QUEUEBUF_CONF_NUM          16
+//#define QUEUEBUF_CONF_NUM          32
 
 //Removed at suggestion of TI
 //#undef UIP_CONF_BUFFER_SIZE

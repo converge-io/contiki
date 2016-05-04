@@ -58,7 +58,7 @@
 #endif /* NETSTACK_CONF_NETWORK */
 
 #ifndef NETSTACK_CONF_MAC
-#define NETSTACK_CONF_MAC     csma_driver
+#define NETSTACK_CONF_MAC     nullmac_driver
 #endif
 
 
@@ -70,8 +70,8 @@
 #define NULLRDC_CONF_802154_AUTOACK             1
 
 /* Configure ContikiMAC for when it's selected */
-#define CONTIKIMAC_CONF_WITH_CONTIKIMAC_HEADER  1
-#define CONTIKIMAC_CONF_WITH_PHASE_OPTIMIZATION 1
+#define CONTIKIMAC_CONF_WITH_CONTIKIMAC_HEADER  0
+#define CONTIKIMAC_CONF_WITH_PHASE_OPTIMIZATION 0
 #define WITH_FAST_SLEEP                         1
 
 #ifndef NETSTACK_CONF_RDC_CHANNEL_CHECK_RATE
@@ -85,9 +85,6 @@
 #if CPU_FAMILY_CC13XX
 #define NETSTACK_CONF_RADIO        prop_mode_driver
 
-#ifndef RF_CORE_CONF_CHANNEL
-#define RF_CORE_CONF_CHANNEL                      0
-#endif
 
 #define NULLRDC_CONF_ACK_WAIT_TIME                (RTIMER_SECOND / 400)
 #define NULLRDC_CONF_AFTER_ACK_DETECTED_WAIT_TIME (RTIMER_SECOND / 1000)

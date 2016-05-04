@@ -180,7 +180,7 @@ PROCESS_THREAD(cetic_6lbr_client_process, ev, data)
 
   memset(&dest_addr, 0, sizeof(uip_ipaddr_t));
 
-  etimer_set(&et, MSG_INTERVAL);
+  etimer_set(&, MSG_INTERVAL);
   while(1) {
     PROCESS_YIELD();
     if(etimer_expired(&et)) {
